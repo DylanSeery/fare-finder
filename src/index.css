@@ -48,3 +48,8 @@
     --ring: 224.3 76.3% 48%;
   }
 }
+
+.flight-wrapper {
+  max-height: calc(100svh - 177px);
+  overflow: scroll;
+}

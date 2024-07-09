@@ -33,6 +33,7 @@ const FlightWrapper = ({
 							inboundDepartureDateFrom: inboundDeparture,
 							inboundDepartureDateTo: inboundDeparture,
 							currency: "EUR",
+							priceValueTo: 1000,
 						},
 					},
 				);
@@ -56,7 +57,7 @@ const FlightWrapper = ({
 	}
 
 	return (
-		<div>
+		<div className="mt-2 flight-wrapper">
 			{flights.map((flight) => (
 				<Flight key={flight.inbound.flightNumber} flight={flight} />
 			))}

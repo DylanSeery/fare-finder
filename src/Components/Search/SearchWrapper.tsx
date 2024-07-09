@@ -35,7 +35,7 @@ const SearchWrapper = ({
 	};
 
 	return (
-		<div className="flex gap-2 flex-col items-center mt-2">
+		<div className="flex gap-2 flex-col items-center">
 			<DestinationSelect updateDestination={setSelectedDestination} />
 			<DatePickerWithRange date={date} setDate={setDate} />
 			<Button

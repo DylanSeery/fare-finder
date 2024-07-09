@@ -15,3 +15,11 @@ export function getTimeDifference(startDate: Date, endDate: Date): string {
 	const formattedTime = `${hours ? `${hours}h ` : ""}${remainingMinutes ? `${remainingMinutes}m` : ""}`;
 	return formattedTime;
 }
+
+export function getTimeFromDate(date: Date) {
+	const hours = date.getHours().toString().padStart(2, "0");
+	const minutes = date.getMinutes().toString().padStart(2, "0");
+
+	const formattedTime = `${hours}:${minutes}`;
+	return formattedTime;
+}
