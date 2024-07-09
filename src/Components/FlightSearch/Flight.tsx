@@ -4,6 +4,13 @@ import { getTimeDifference, getTimeFromDate } from "../../lib/utils";
 import { Button } from "../ui/button";
 
 const Flight = ({ flight }: { flight: IFlight }) => {
+	const openRyanair = () => {
+		window.open(
+			`https://www.ryanair.com/ie/en/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=${new Date(flight.outbound.departureDate).toISOString().slice(0, 10)}dateIn=${new Date(flight.inbound.departureDate).toISOString().slice(0, 10)}&isReturn=true&discount=0&originIata=${flight.outbound.departureAirport.iataCode}&destinationIata=${flight.inbound.departureAirport.iataCode}&tpAdults=1&tpTeens=0&tpChildren=0&tpInfants=0&tpStartDate=${new Date(flight.outbound.departureDate).toISOString().slice(0, 10)}&tpEndDate=${new Date(flight.inbound.departureDate).toISOString().slice(0, 10)}&tpDiscount=0&tpOriginIata=${flight.outbound.departureAirport.iataCode}&tpDestinationIata=${flight.inbound.departureAirport.iataCode}`,
+			"_blank",
+		);
+	};
+
 	return (
 		<Card className="mb-1 mt-1 pt-2 pb-2 pl-1 pr-1">
 			<div className="pl-1 pr-1">
@@ -59,7 +66,7 @@ const Flight = ({ flight }: { flight: IFlight }) => {
 					</span>
 				</div>
 			</div>
-			<Button variant="ghost" className="w-full">
+			<Button variant="ghost" className="w-full" onClick={openRyanair}>
 				{flight.outbound.price.currencySymbol}
 				{flight.outbound.price.value}
 			</Button>
