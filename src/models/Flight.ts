@@ -1,10 +1,10 @@
-export interface Fare {
+export interface IFlight {
 	outbound: Outbound;
 	inbound: Inbound;
 	summary: Summary;
 }
 
-export interface Outbound {
+interface Outbound {
 	departureAirport: DepartureAirport;
 	arrivalAirport: ArrivalAirport;
 	departureDate: string;
@@ -16,7 +16,7 @@ export interface Outbound {
 	priceUpdated: number;
 }
 
-export interface DepartureAirport {
+interface DepartureAirport {
 	countryName: string;
 	iataCode: string;
 	name: string;
@@ -24,13 +24,13 @@ export interface DepartureAirport {
 	city: City;
 }
 
-export interface City {
+interface City {
 	name: string;
 	code: string;
 	countryCode: string;
 }
 
-export interface ArrivalAirport {
+interface ArrivalAirport {
 	countryName: string;
 	iataCode: string;
 	name: string;
@@ -38,7 +38,7 @@ export interface ArrivalAirport {
 	city: City;
 }
 
-export interface Price {
+interface Price {
 	value: number;
 	valueMainUnit: string;
 	valueFractionalUnit: string;
@@ -46,7 +46,7 @@ export interface Price {
 	currencySymbol: string;
 }
 
-export interface Inbound {
+interface Inbound {
 	departureAirport: DepartureAirport;
 	arrivalAirport: ArrivalAirport;
 	departureDate: string;
@@ -58,7 +58,7 @@ export interface Inbound {
 	priceUpdated: number;
 }
 
-export interface Summary {
+interface Summary {
 	price: Price;
 	previousPrice: string | null;
 	newRoute: boolean;
