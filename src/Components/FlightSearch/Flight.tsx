@@ -67,8 +67,8 @@ const Flight = ({ flight }: { flight: IFlight }) => {
 				</div>
 			</div>
 			<Button variant="ghost" className="w-full" onClick={openRyanair}>
-				{flight.outbound.price.currencySymbol}
-				{flight.outbound.price.value}
+				{flight.summary.price.currencySymbol}
+				{flight.summary.price.value.toFixed(2)}
 			</Button>
 		</Card>
 	);
