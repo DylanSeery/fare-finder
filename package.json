@@ -7,7 +7,9 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "pnpm biome lint ./src",
+		"lint:check": "pnpm biome lint --error-on-warnings ./src",
 		"format": "pnpm biome format ./src",
+		"format:check": "pnpm biome format --error-on-warnings ./src",
 		"typecheck": "tsc --noEmit",
 		"preview": "vite preview"
 	},

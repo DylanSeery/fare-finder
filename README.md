@@ -1,29 +1,48 @@
-# React + TypeScript + Vite
+# Fare Finder
 
-This project is built using React, TypeScript, and Vite.
+Fare Finder is a simple React TypeScript project using Vite, Shadcn UI, and the Ryanair Fare Finder API to fetch and display cheap flight deals. This project is built using pnpm for package management.
+
+## Features
+
+- Fetch cheap flights using the Ryanair Fare Finder API
+- Modern UI with Shadcn UI
+- Fast development with Vite
+- Written in TypeScript for type safety
+
+## Prerequisites
+
+- Node.js
+- pnpm
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/DylanSeery/fare-finder.git
+   cd fare-finder
+   ```
 
-### Prerequisites
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
 
-- Node.js
-- PNPM
+3. **Start the development server:**
+   ```bash
+   pnpm dev
+   ```
 
-### Installation
+4. **Build for production:**
+   ```bash
+   pnpm build
+   ```
 
-1. Clone the repo
-2. Install PNPM packages
+5. **Preview the production build:**
+   ```bash
+   pnpm preview
+   ```
 
-Usage
-To start the development server, run:
-pnpm run dev
+## Contributing
 
-To build the project, run:
-pnpm run build
+Contributions are welcome! Please open an issue or submit a pull request with your changes.
 
-Built With
-React
-TypeScript
-Vite
