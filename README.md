@@ -1,7 +1,5 @@
 # React + TypeScript + Vite
 
-# Project Title
-
 This project is built using React, TypeScript, and Vite.
 
 ## Getting Started
